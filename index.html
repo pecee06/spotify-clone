@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="shortcut icon" href="./resources/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/utils.css">
+    <link rel="stylesheet" href="./css/glocal.css">
+</head>
+<body class="grid">
+    <div id="left-pane" class="grid">
+        <div id="menu" class="flex-col even-col box">
+            <div>
+                <img src="./resources/logo.svg" alt="" class="invert-1">
+            </div>
+            <div class="flex align-center gap-2">
+                <img src="./resources/home.svg" alt="" class="icon-1 invert-1">
+                <span class="pointer">Home</span>
+            </div>
+            <div class="flex align-center gap-2">
+                <img src="./resources/search.svg" alt="" class="icon-1 invert-1">
+                <span class="pointer">Search</span>
+            </div>
+        </div>
+        <div id="library" class="box flex-col gap-1">
+            <div class="header flex space-between align-center">
+                <div class="flex gap-1 align-center">
+                    <img src="./resources/library.svg" alt="" class="invert-2 icon-3 pointer">
+                    <span class="bold">Your Library</span>
+                </div>
+                <img src="./resources/plus.svg" alt="" class="invert-2 icon-1 pointer">
+            </div>
+            <div class="songs">
+                <ul class="flex-col gap-1"></ul>
+            </div>
+        </div>
+    </div>
+    <div id="right-pane" class="grid">
+        <div id="header" class="flex space-between align-center box">
+            <div class="flex gap-2">
+                <img src="./resources/left-arrow.svg" alt="" class="icon-2 invert-2">
+                <img src="./resources/right-arrow.svg" alt="" class="icon-2 invert-2">
+            </div>
+            <div class="flex gap-3">
+                <button class="pointer">Sign up</button>
+                <button class="pointer">Log in</button>
+            </div>
+        </div>
+        <div id="main" class="box flex-col gap-2">
+            <h2>Spotify Playlists</h2>
+            <div class="cards flex wrap gap-2"></div>
+        </div>
+        <div id="player" class="flex-col space-between align-center">
+            <div class="flex space-between align-center">
+                <span class="song-name"></span>
+                <div class="controls flex gap-3">
+                    <img src="./resources/previous.svg" alt="" class="invert-2 pointer" id="previous">
+                    <img src="./resources/play.svg" alt="" class="invert-2 pointer" id="play-pause">
+                    <img src="./resources/next.svg" alt="" class="invert-2 pointer" id="next">
+                </div>
+                <div class="flex-col gap-1">
+                    <span class="timestamp">00:00 | 00:00</span>
+                    <input type="range" id="volume-rocker" value="100" class="invert-1">
+                </div>
+            </div>
+            <div class="seekbar relative rounded pointer">
+                <div class="thumb"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/script.js"></script>
+</html>
